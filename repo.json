@@ -1,8 +1,7 @@
 {
-    "name": "Kiikuuchii's Repo",
-    "description": "RU sources for Cloudstream",
-    "manifestVersion": 1,
-    "pluginLists": [
-        "https://raw.githubusercontent.com/markvis370-star/ru-extensions-cs/refs/heads/builds/plugins.json"
-    ]
+  "name": "ru-extensions-cs",
+  "description": "Русскоязычные расширения для Cloudstream",
+  "url": "https://github.com/kiikuuchii/ru-extensions-cs",
+  "icon": "",
+  "plugins": "plugins.json"
 }
