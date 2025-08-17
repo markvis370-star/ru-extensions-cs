@@ -1,9 +1,13 @@
 [
-    {
-        "version": 1,
-        "internalName": "RezkaAG",
-        "url": "https://raw.githubusercontent.com/markvis370-star/ru-extansions-cs/builds/RezkaAG.cs3",
-        "name": "RezkaAG",
-        "description": "Плагин Hdrezka для CloudStream"
-    }
+  {
+    "name": "Rezka",
+    "id": "rezka",
+    "lang": "ru",
+    "type": 1,
+    "icon": "",
+    "description": "Смотреть фильмы и сериалы с rezka",
+    "version": "1.0.0",
+    "filename": "Rezka-v1.0.0.cs3",
+    "repo": "https://github.com/kiikuuchii/ru-extensions-cs"
+  }
 ]
