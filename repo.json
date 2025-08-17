@@ -3,11 +3,11 @@
     "description": "RU sources for Cloudstream",
     "manifestVersion": 1,
     "pluginLists": [
-         {
-      "name": "hdrezka",
-      "file": "hdrezka.cs3",
-      "description": "HDRezka source",
-      "version": "1.0.0"
-    }
+        {
+            "name": "hdrezka",
+            "file": "hdrezka.cs3",
+            "description": "HDRezka source",
+            "version": "1.0.0"
+        }
     ]
 }
