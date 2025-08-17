@@ -1,0 +1,7 @@
+{
+  "name": "ru-extensions-cs",
+  "description": "Русскоязычные расширения для Cloudstream",
+  "url": "https://github.com/kiikuuchii/ru-extensions-cs",
+  "icon": "",
+  "plugins": "plugins.json"
+}
