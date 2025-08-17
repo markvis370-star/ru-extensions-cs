@@ -4,6 +4,6 @@ plugins {
 
 cloudstream {
     language = "ru"
-    description = "Плагин для просмотра фильмов и сериалов с rezka"
+    description = "Плагин для просмотра фильмов и сериалов с rezka.ua.org"
     authors = listOf("kiikuuchii")
 }
