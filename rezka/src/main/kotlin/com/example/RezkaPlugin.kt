@@ -12,7 +12,7 @@ class RezkaPlugin : Plugin() {
 }
 
 class RezkaProvider : MainAPI() {
-    override var mainUrl = "https://rezka.ag"
+    override var mainUrl = "https://rezka.ua.org"
     override var name = "Rezka"
     override var lang = "ru"
     override val supportedTypes = setOf(
