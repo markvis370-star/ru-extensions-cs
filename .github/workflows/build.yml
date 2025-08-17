@@ -1,42 +1,32 @@
-package com.example
+name: Build Extensions
 
-import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.utils.ExtractorLink
+on:
+  push:
+    branches: [ builds ]
+  pull_request:
+    branches: [ builds ]
 
-@CloudstreamPlugin
-class RezkaPlugin : Plugin() {
-    override fun load(context: PluginContext) {
-        registerMainAPI(RezkaProvider())
-    }
-}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-class RezkaProvider : MainAPI() {
-    override var mainUrl = "https://rezka.ua.org"
-    override var name = "Rezka"
-    override var lang = "ru"
-    override val supportedTypes = setOf(
-        TvType.Movie,
-        TvType.TvSeries
-    )
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
 
-    // Поиск (НЕ РАБОТАЕТ, только пример)
-    override suspend fun search(query: String): List<SearchResponse> {
-        return emptyList()
-    }
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
-    // Информация о фильме (НЕ РАБОТАЕТ, только пример)
-    override suspend fun load(url: String): LoadResponse? {
-        return null
-    }
+      - name: Build extensions
+        run: ./gradlew build
 
-    // Получение ссылок на видео (НЕ РАБОТАЕТ, только пример)
-    override suspend fun loadLinks(
-        data: String,
-        isCasting: Boolean,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (ExtractorLink) -> Unit
-    ): Boolean {
-        return false
-    }
-}
+      - name: Upload built extensions
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-extensions
+          path: "**/build/outputs/*.cs3"
