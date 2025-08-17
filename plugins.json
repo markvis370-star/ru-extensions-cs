@@ -1,9 +1,9 @@
 [
-  {
-    "version": 1,
-    "internalName": "RezkaAG",
-    "url": "https://raw.githubusercontent.com/markvis370-star/ТВОЙ_РЕПОЗИТОРИЙ/main/RezkaAG.cs3",
-    "name": "RezkaAG",
-    "description": "Плагин Hdrezka для CloudStream"
-  }
+    {
+        "version": 1,
+        "internalName": "RezkaAG",
+        "url": "https://raw.githubusercontent.com/markvis370-star/ru-extansions-cs/builds/RezkaAG.cs3",
+        "name": "RezkaAG",
+        "description": "Плагин Hdrezka для CloudStream"
+    }
 ]
