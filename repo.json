@@ -1,0 +1,11 @@
+{
+  "name": "kiikuuchii repo",
+  "description": "Rulingual extensions",
+  "manifestVersion": 1,
+  "pluginLists": [
+    {
+      "name": "RezkaAG",
+      "file": "rezkag.cs3",
+      "description": "Rezka source",
+      "version": "1.0.0"
+    }
